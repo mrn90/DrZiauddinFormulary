@@ -14,6 +14,15 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-DrZiauddinFormulary-DrZiauddinFormularyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-DrZiauddinFormulary-DrZiauddinFormularyTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B9254CA8292656E300F4837B /* GOTHICI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = B9254C9F292656E200F4837B /* GOTHICI.TTF */; };
+		B9254CA9292656E300F4837B /* GOTHICBI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = B9254CA0292656E200F4837B /* GOTHICBI.TTF */; };
+		B9254CAA292656E300F4837B /* GOTHIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = B9254CA1292656E200F4837B /* GOTHIC.TTF */; };
+		B9254CAB292656E300F4837B /* CenturyGothic-Bold.TTF in Resources */ = {isa = PBXBuildFile; fileRef = B9254CA2292656E200F4837B /* CenturyGothic-Bold.TTF */; };
+		B9254CAC292656E300F4837B /* EurostileBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9254CA3292656E200F4837B /* EurostileBold.ttf */; };
+		B9254CAD292656E300F4837B /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9254CA4292656E200F4837B /* JosefinSans-SemiBold.ttf */; };
+		B9254CAE292656E300F4837B /* Century-Gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9254CA5292656E200F4837B /* Century-Gothic.ttf */; };
+		B9254CAF292656E300F4837B /* GOTHICB0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = B9254CA6292656E300F4837B /* GOTHICB0.TTF */; };
+		B9254CB0292656E300F4837B /* CenturyGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9254CA7292656E300F4837B /* CenturyGothic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +52,19 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-DrZiauddinFormulary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrZiauddinFormulary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = DrZiauddinFormulary/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.release.xcconfig"; path = "Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.release.xcconfig"; sourceTree = "<group>"; };
+		B9254C972926557100F4837B /* Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bold.ttf; path = ../src/assets/fonts/Bold.ttf; sourceTree = "<group>"; };
+		B9254C982926557100F4837B /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
+		B9254C992926557200F4837B /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Thin.ttf"; path = "../src/assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		B9254C9D292655EE00F4837B /* Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Regular.ttf; path = ../src/assets/fonts/Regular.ttf; sourceTree = "<group>"; };
+		B9254C9F292656E200F4837B /* GOTHICI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = GOTHICI.TTF; path = ../src/assets/fonts/GOTHICI.TTF; sourceTree = "<group>"; };
+		B9254CA0292656E200F4837B /* GOTHICBI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = GOTHICBI.TTF; path = ../src/assets/fonts/GOTHICBI.TTF; sourceTree = "<group>"; };
+		B9254CA1292656E200F4837B /* GOTHIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = GOTHIC.TTF; path = ../src/assets/fonts/GOTHIC.TTF; sourceTree = "<group>"; };
+		B9254CA2292656E200F4837B /* CenturyGothic-Bold.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CenturyGothic-Bold.TTF"; path = "../src/assets/fonts/CenturyGothic-Bold.TTF"; sourceTree = "<group>"; };
+		B9254CA3292656E200F4837B /* EurostileBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = EurostileBold.ttf; path = ../src/assets/fonts/EurostileBold.ttf; sourceTree = "<group>"; };
+		B9254CA4292656E200F4837B /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-SemiBold.ttf"; path = "../src/assets/fonts/JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		B9254CA5292656E200F4837B /* Century-Gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Century-Gothic.ttf"; path = "../src/assets/fonts/Century-Gothic.ttf"; sourceTree = "<group>"; };
+		B9254CA6292656E300F4837B /* GOTHICB0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = GOTHICB0.TTF; path = ../src/assets/fonts/GOTHICB0.TTF; sourceTree = "<group>"; };
+		B9254CA7292656E300F4837B /* CenturyGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = CenturyGothic.ttf; path = ../src/assets/fonts/CenturyGothic.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -116,6 +138,19 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				B9254CA5292656E200F4837B /* Century-Gothic.ttf */,
+				B9254CA2292656E200F4837B /* CenturyGothic-Bold.TTF */,
+				B9254CA7292656E300F4837B /* CenturyGothic.ttf */,
+				B9254CA3292656E200F4837B /* EurostileBold.ttf */,
+				B9254CA1292656E200F4837B /* GOTHIC.TTF */,
+				B9254CA6292656E300F4837B /* GOTHICB0.TTF */,
+				B9254CA0292656E200F4837B /* GOTHICBI.TTF */,
+				B9254C9F292656E200F4837B /* GOTHICI.TTF */,
+				B9254CA4292656E200F4837B /* JosefinSans-SemiBold.ttf */,
+				B9254C9D292655EE00F4837B /* Regular.ttf */,
+				B9254C972926557100F4837B /* Bold.ttf */,
+				B9254C982926557100F4837B /* Poppins-Light.ttf */,
+				B9254C992926557200F4837B /* Poppins-Thin.ttf */,
 				13B07FAE1A68108700A75B9A /* DrZiauddinFormulary */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* DrZiauddinFormularyTests */,
@@ -242,6 +277,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9254CA8292656E300F4837B /* GOTHICI.TTF in Resources */,
+				B9254CA9292656E300F4837B /* GOTHICBI.TTF in Resources */,
+				B9254CAA292656E300F4837B /* GOTHIC.TTF in Resources */,
+				B9254CAB292656E300F4837B /* CenturyGothic-Bold.TTF in Resources */,
+				B9254CAC292656E300F4837B /* EurostileBold.ttf in Resources */,
+				B9254CAD292656E300F4837B /* JosefinSans-SemiBold.ttf in Resources */,
+				B9254CAE292656E300F4837B /* Century-Gothic.ttf in Resources */,
+				B9254CAF292656E300F4837B /* GOTHICB0.TTF in Resources */,
+				B9254CB0292656E300F4837B /* CenturyGothic.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -578,7 +622,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -642,7 +686,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
