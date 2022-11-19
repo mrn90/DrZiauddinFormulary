@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* DrZiauddinFormularyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DrZiauddinFormularyTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-DrZiauddinFormulary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-DrZiauddinFormulary.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-DrZiauddinFormulary-DrZiauddinFormularyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-DrZiauddinFormulary-DrZiauddinFormularyTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B9254CA8292656E300F4837B /* GOTHICI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = B9254C9F292656E200F4837B /* GOTHICI.TTF */; };
 		B9254CA9292656E300F4837B /* GOTHICBI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = B9254CA0292656E200F4837B /* GOTHICBI.TTF */; };
@@ -23,6 +21,8 @@
 		B9254CAE292656E300F4837B /* Century-Gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9254CA5292656E200F4837B /* Century-Gothic.ttf */; };
 		B9254CAF292656E300F4837B /* GOTHICB0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = B9254CA6292656E300F4837B /* GOTHICB0.TTF */; };
 		B9254CB0292656E300F4837B /* CenturyGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9254CA7292656E300F4837B /* CenturyGothic.ttf */; };
+		EE9430C92702FA6854296D5E /* libPods-DrZiauddinFormulary-DrZiauddinFormularyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9EFC3D8740E7CEB04C74FB /* libPods-DrZiauddinFormulary-DrZiauddinFormularyTests.a */; };
+		FC80CE3DC49BDFECD7F68B61 /* libPods-DrZiauddinFormulary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 275053F127F316044720ED3A /* libPods-DrZiauddinFormulary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,13 +45,11 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DrZiauddinFormulary/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DrZiauddinFormulary/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DrZiauddinFormulary/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-DrZiauddinFormulary-DrZiauddinFormularyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrZiauddinFormulary-DrZiauddinFormularyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4392A12AC88292D35C810B /* Pods-DrZiauddinFormulary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrZiauddinFormulary.debug.xcconfig"; path = "Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-DrZiauddinFormulary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrZiauddinFormulary.release.xcconfig"; path = "Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.debug.xcconfig"; path = "Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-DrZiauddinFormulary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrZiauddinFormulary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		275053F127F316044720ED3A /* libPods-DrZiauddinFormulary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrZiauddinFormulary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5847E70DAB273DFAF6B28D92 /* Pods-DrZiauddinFormulary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrZiauddinFormulary.debug.xcconfig"; path = "Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = DrZiauddinFormulary/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.release.xcconfig"; path = "Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.release.xcconfig"; sourceTree = "<group>"; };
+		8BB907D61BA8091BE92A3BD5 /* Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.debug.xcconfig"; path = "Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA9EFC3D8740E7CEB04C74FB /* libPods-DrZiauddinFormulary-DrZiauddinFormularyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrZiauddinFormulary-DrZiauddinFormularyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9254C972926557100F4837B /* Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bold.ttf; path = ../src/assets/fonts/Bold.ttf; sourceTree = "<group>"; };
 		B9254C982926557100F4837B /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		B9254C992926557200F4837B /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Thin.ttf"; path = "../src/assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
@@ -65,7 +63,9 @@
 		B9254CA5292656E200F4837B /* Century-Gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Century-Gothic.ttf"; path = "../src/assets/fonts/Century-Gothic.ttf"; sourceTree = "<group>"; };
 		B9254CA6292656E300F4837B /* GOTHICB0.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = GOTHICB0.TTF; path = ../src/assets/fonts/GOTHICB0.TTF; sourceTree = "<group>"; };
 		B9254CA7292656E300F4837B /* CenturyGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = CenturyGothic.ttf; path = ../src/assets/fonts/CenturyGothic.ttf; sourceTree = "<group>"; };
+		C358082AC6C5C9C0CCA64A12 /* Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.release.xcconfig"; path = "Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FE0102E8BAAF8E57CDB29735 /* Pods-DrZiauddinFormulary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrZiauddinFormulary.release.xcconfig"; path = "Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-DrZiauddinFormulary-DrZiauddinFormularyTests.a in Frameworks */,
+				EE9430C92702FA6854296D5E /* libPods-DrZiauddinFormulary-DrZiauddinFormularyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-DrZiauddinFormulary.a in Frameworks */,
+				FC80CE3DC49BDFECD7F68B61 /* libPods-DrZiauddinFormulary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,8 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-DrZiauddinFormulary.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-DrZiauddinFormulary-DrZiauddinFormularyTests.a */,
+				275053F127F316044720ED3A /* libPods-DrZiauddinFormulary.a */,
+				AA9EFC3D8740E7CEB04C74FB /* libPods-DrZiauddinFormulary-DrZiauddinFormularyTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -175,10 +175,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-DrZiauddinFormulary.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-DrZiauddinFormulary.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.release.xcconfig */,
+				5847E70DAB273DFAF6B28D92 /* Pods-DrZiauddinFormulary.debug.xcconfig */,
+				FE0102E8BAAF8E57CDB29735 /* Pods-DrZiauddinFormulary.release.xcconfig */,
+				8BB907D61BA8091BE92A3BD5 /* Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.debug.xcconfig */,
+				C358082AC6C5C9C0CCA64A12 /* Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -190,12 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "DrZiauddinFormularyTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				390E0CFF0524B968ECC8C134 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				C39E8A0E91729EE34EE3022C /* [CP] Embed Pods Frameworks */,
+				0BFE91563E2533CE2BB63B5D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,14 +211,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DrZiauddinFormulary" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				D88347A48D9E4D459CD0ABAC /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				63CA248CE10D752DA6A4E5E4 /* [CP] Embed Pods Frameworks */,
+				8DDD493506C657C7113D4090 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,24 +308,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+		0BFE91563E2533CE2BB63B5D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		390E0CFF0524B968ECC8C134 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -347,7 +347,58 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		63CA248CE10D752DA6A4E5E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DDD493506C657C7113D4090 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C39E8A0E91729EE34EE3022C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D88347A48D9E4D459CD0ABAC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,57 +418,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary/Pods-DrZiauddinFormulary-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests/Pods-DrZiauddinFormulary-DrZiauddinFormularyTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -472,7 +472,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.debug.xcconfig */;
+			baseConfigurationReference = 8BB907D61BA8091BE92A3BD5 /* Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -499,7 +499,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.release.xcconfig */;
+			baseConfigurationReference = C358082AC6C5C9C0CCA64A12 /* Pods-DrZiauddinFormulary-DrZiauddinFormularyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -523,7 +523,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-DrZiauddinFormulary.debug.xcconfig */;
+			baseConfigurationReference = 5847E70DAB273DFAF6B28D92 /* Pods-DrZiauddinFormulary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -550,7 +550,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-DrZiauddinFormulary.release.xcconfig */;
+			baseConfigurationReference = FE0102E8BAAF8E57CDB29735 /* Pods-DrZiauddinFormulary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

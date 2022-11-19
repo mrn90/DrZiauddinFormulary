@@ -15,6 +15,9 @@ export const fonts = {
 
 export const icons = {
     iconDrawer: require('./icons/iconDrawer.png'),
+    iconCheck: require('./icons/iconCheck.png'),
+    profileIcon: require('./icons/user.png'),
+    // iconDrawer: require('./icons/iconDrawer.png'),
 
 };
 
@@ -26,6 +29,8 @@ export const icons = {
 
 export const images = {
     logo: require('./images/logo.png'),
+    logo1: require('./images/logo1.png'),
+    logo2: require('./images/logo2.png'),
 
 };
 
