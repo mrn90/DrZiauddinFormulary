@@ -7,38 +7,38 @@ import { vh, vw } from '../../utils/units';
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles';
 const DrawerContent = props => {
-    // const navigation = useNavigation();
+    const navigation = useNavigation();
     return (
 
         <View style={styles.drawerScreensContainer}>
 
-            <View style={styles.screenContainer}>
+            <TouchableOpacity style={styles.screenContainer} onPress={() => { navigation.navigate('AuthNavigator', 'ProfileScreen') }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', marginHorizontal: 2 * vh }}>
-                    <Image source={icons.profileIcon} style={styles.profileIcon} />
-                    <CenturyGothic style={styles.text}>My Doctors</CenturyGothic>
+                    <Image source={icons.iconInformation} style={styles.profileIcon} />
+                    <CenturyGothic style={styles.text}>Profile Information</CenturyGothic>
                 </View>
 
 
                 <Image source={icons.rightArrow} style={styles.arrow} />
-            </View>
-            <View style={styles.screenContainer}>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.screenContainer}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', marginHorizontal: 2 * vh }}>
-                    <Image source={icons.profileIcon} style={styles.profileIcon} />
-                    <CenturyGothic style={styles.text}>Medical Records</CenturyGothic>
+                    <Image source={icons.iconTermsCondition} style={styles.profileIcon} />
+                    <CenturyGothic style={styles.text}>Terms of Service</CenturyGothic>
                 </View>
 
 
                 <Image source={icons.rightArrow} style={styles.arrow} />
-            </View>
-            <View style={styles.screenContainer}>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.screenContainer}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', marginHorizontal: 2 * vh }}>
-                    <Image source={icons.profileIcon} style={styles.profileIcon} />
-                    <CenturyGothic style={styles.text}>Payments</CenturyGothic>
+                    <Image source={icons.logout} style={styles.profileIcon} />
+                    <CenturyGothic style={styles.text}>Exit</CenturyGothic>
                 </View>
 
 
-                <Image source={icons.iconCheck} style={styles.arrow} />
-            </View>
+                <Image source={icons.rightArrow} style={styles.arrow} />
+            </TouchableOpacity>
 
 
         </View>

@@ -9,6 +9,9 @@ const styles = StyleSheet.create({
         width: '100%',
         backgroundColor: 'white'
     },
+    container: {
+        flex: 1
+    },
     logo: {
         height: 15 * vh,
         width: 35 * vh,
@@ -68,8 +71,9 @@ const styles = StyleSheet.create({
         color: colors.lightGray
     },
     btnContainer: {
-        position: 'absolute',
-        bottom: 7 * vh,
+        position: 'relative',
+        // bottom: 7 * vh,
+        marginBottom: 10 * vh,
         width: '90%',
         alignSelf: 'center',
     },

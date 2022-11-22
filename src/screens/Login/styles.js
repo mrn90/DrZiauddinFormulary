@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { clockRunning } from 'react-native-reanimated';
 import { fonts } from '../../assets';
 import { colors } from '../../utils/theme';
 import { vh, vw } from '../../utils/units';
@@ -7,7 +8,7 @@ const styles = StyleSheet.create({
     mainView: {
         flex: 1,
         width: '100%',
-        backgroundColor: 'white'
+        backgroundColor: '#FFF'
     },
     logosContainer: {
         flexDirection: 'row',
@@ -34,8 +35,9 @@ const styles = StyleSheet.create({
         // justifyContent: 'center',
         // alignItems: 'center',
         // backgroundColor: 'white',
-        // borderWidth: 0.04 * vh,
-        backgroundColor: 'white',
+        // color: colors.black,
+        borderWidth: 0.04 * vh,
+        backgroundColor: colors.white,
         borderColor: colors.lightGray,
         borderRadius: 4 * vh,
         paddingVertical: 2 * vh,
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
         // shadowRadius: 0.4 * vh,
         // zIndex: 2 * vh
         fontFamily: fonts.CenturyGothic.CenturyGothic,
-        fontWeight: 'bold'
+        // fontWeight: 'bold'
 
     },
     placeholder: {
@@ -88,7 +90,16 @@ const styles = StyleSheet.create({
         // backgroundColor: 'green'
     },
     text: {
-        fontFamily: fonts.CenturyGothic.CenturyGothic
+        fontFamily: fonts.CenturyGothic.CenturyGothic,
+        color: colors.black
+        // backgroundColor: 'red',
+        // color: colors.red
+
+    },
+    textTermService: {
+        fontFamily: fonts.CenturyGothic.CenturyGothic,
+        color: colors.black,
+        fontWeight: 'bold'
     },
     loginBtn: {
         marginTop: 4 * vh,

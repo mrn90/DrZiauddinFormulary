@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: 'center',
         right: 2 * vh,
+        display: 'none'
     },
     bell: {
         height: 2 * vh,
@@ -62,16 +63,18 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     },
     profileImageContainer: {
-        borderRadius: 6 * vh,
-        alignSelf: 'center',
-        zIndex: 5 * vh,
+        // alignSelf: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+        // zIndex: 5 * vh,
         // backgroundColor: 'red',
+        width: '100%'
         // bottom: 6.5 * vh,
     },
     profileImage: {
-        // resizeMode: 'contain',
-        height: vh * 10,
-        width: vh * 10,
+        resizeMode: 'contain',
+        height: 15 * vh,
+        width: 35 * vh,
         // position: 'absolute',
         // bottom: vh * 2,
     },

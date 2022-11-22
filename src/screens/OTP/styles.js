@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     },
     field: {
         alignSelf: 'center',
-        borderWidth: 0.1 * vh,
+        borderWidth: 0.04 * vh,
         backgroundColor: 'white',
         borderColor: colors.lightGray,
         borderRadius: 4 * vh,
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
         marginTop: 2 * vh,
         shadowOpacity: 0.3,
         shadowOffset: { width: 0, height: 3 },
+        color: colors.grayText1
     },
     placeholder: {
         fontFamily: fonts.CenturyGothic.CenturyGothic

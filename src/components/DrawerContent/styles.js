@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
         borderColor: colors.grayText3,
         borderWidth: 0.2 * vh,
         width: 85 * vw,
-        paddingVertical: 2,
+        paddingVertical: 2.5 * vh,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -165,10 +165,10 @@ const styles = StyleSheet.create({
         // right: 6 * vh
     },
     arrow: {
-        height: 6 * vh,
-        width: 6 * vh,
+        height: 2.5 * vh,
+        width: 2.5 * vh,
         resizeMode: 'contain',
-        // left: 3 * vh
+        right: 2 * vh
         // backgroundColor: 'red'
     },
     iconLogout: {

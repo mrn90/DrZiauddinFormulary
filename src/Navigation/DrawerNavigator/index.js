@@ -5,12 +5,13 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 // import AuthNavigator from '../AuthNavigator';
 // import DrawerNavigator from '../DrawerNavigator';
 import HomeScreen from '../../screens/HomeScreen'
+import MedicineDetail from '../../screens/MedicineDetail'
 // import Message from '../../screens/Message';
 // import {options} from '../NavigationHeader';
 import { vw, vh } from '../../utils/units';
 import styles from './styles';
 import CenturyGothic from '../../components/Wrappers/Text/CenturyGothic';
-import { icons } from '../../assets';
+import { icons, images } from '../../assets';
 import DrawerContent from '../../components/DrawerContent';
 
 const DrawerStack = createDrawerNavigator();
@@ -42,39 +43,23 @@ const DrawerNavigator = (props) => {
                         <View style={styles.drawerContainer}>
                             <View style={styles.topContainer}>
                                 <View style={styles.headingContainer}>
-                                    <Image source={icons.iconCheck} style={styles.iconBack} />
-                                    {/* <CenturyGothic style={styles.headingText}>Menu</CenturyGothic> */}
+                                    <Image source={icons.leftArrow} style={styles.iconBack} />
                                     <View style={styles.notificationBackground}>
                                         <Image source={icons.bell} style={styles.bell} />
                                     </View>
                                 </View>
 
                                 <View style={styles.profileImageContainer}>
-                                    <Image source={icons.iconCheck} style={styles.profileImage} />
-                                    {/* <TouchableOpacity>
-                                    <View style={styles.cameraContainer}>
-                                        <Image source={icons.iconCamera2} style={styles.IconCamera2} />
-                                    </View>
-                                </TouchableOpacity> */}
+                                    <Image source={images.logo4} style={styles.profileImage} />
                                 </View>
-                                <CenturyGothic style={styles.userName}>Sheikh Bilal Bashir</CenturyGothic>
-                                <View style={styles.location}>
-                                    <Image source={icons.iconCheck} style={styles.pin} />
-                                    <CenturyGothic style={styles.locationText}>Karachi, Pakistan</CenturyGothic>
-                                </View>
+                                <CenturyGothic style={styles.userName}>+92 1234 5678 900</CenturyGothic>
+
 
 
                                 {/* drawer screen names component */}
 
                                 <DrawerContent />
-                                <View style={styles.versionLogoutContainer}>
-                                    <View style={styles.logoutContainer}>
-                                        <Image source={icons.iconCheck} style={styles.iconLogout} />
-                                        <CenturyGothic style={styles.logoutText}>Logout</CenturyGothic>
-                                    </View>
-                                    <CenturyGothic>v 1.0</CenturyGothic>
-                                </View>
-                                <View style={styles.separator}></View>
+
 
                             </View>
 
@@ -84,6 +69,7 @@ const DrawerNavigator = (props) => {
             }}
         >
             <DrawerStack.Screen name="Home" component={HomeScreen} />
+            <DrawerStack.Screen name="MedicineDetailScreen" component={MedicineDetail} />
             {/* <Drawer.Screen
         name="DrawerNavigator"
         component={DrawerNavigator}

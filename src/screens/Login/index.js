@@ -17,7 +17,7 @@ const Login = props => {
                 <TextInput
                     style={styles.field}
                     placeholder='Phone Number'
-                    placeholderTextColor={colors.lightGray}
+                    placeholderTextColor={colors.gray12}
                     placeholderStyle={styles.placeholder}
                     keyboardType={'number-pad'}
                 ></TextInput>
@@ -32,7 +32,7 @@ const Login = props => {
 
 
                 <CenturyGothic style={styles.text}>I agree to </CenturyGothic>
-                <CenturyGothic>Terms of Service</CenturyGothic>
+                <CenturyGothic style={styles.textTermService}>Terms of Service</CenturyGothic>
             </View>
 
             <MainButton

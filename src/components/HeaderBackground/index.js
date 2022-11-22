@@ -26,11 +26,11 @@ const HeaderBackground = props => {
         </EurostileBold>
 
         <View style={styles.notificationProfileContainer}>
-          <TouchableOpacity>
-            <Image
-              source={icons.notificationIcon}
-              style={styles.profileIcon}></Image>
-          </TouchableOpacity>
+
+          <Image
+            source={icons.notificationIcon}
+            style={styles.profileIcon}></Image>
+
           <TouchableOpacity>
             <Image
               source={icons.profileIcon}
@@ -79,13 +79,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     // backgroundColor: 'red',
-    width: 11 * vh
+    width: 11 * vh,
+    // display: 'none'
   },
   profileIcon: {
     resizeMode: 'contain',
     height: 4 * vh,
     width: 4 * vh,
     alignItems: 'center',
+    display: 'none'
     // justifyContent: 'flex-start',
     // position: 'relative',
   },

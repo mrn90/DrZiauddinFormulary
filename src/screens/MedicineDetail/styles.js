@@ -98,6 +98,29 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     // justifyContent: 'center',
     // alignContent: 'center'
+  },
+  detailsContainer: {
+    margin: 3 * vh
+  },
+  mainHeading: {
+    marginTop: 2 * vh,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    // marginHorizontal: 2 * vh
+  },
+  mainHeadingText1: {
+    fontSize: 2.5 * vh
+  },
+  mainHeadingText: {
+    color: colors.red,
+    fontSize: 2.5 * vh,
+    left: 1 * vh
+  },
+  text: {
+    marginTop: 2 * vh,
+    fontSize: 2 * vh,
+    fontFamily: fonts.CenturyGothic.CenturyGothic
   }
 });
 
