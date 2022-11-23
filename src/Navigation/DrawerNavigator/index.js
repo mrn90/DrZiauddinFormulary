@@ -13,11 +13,14 @@ import styles from './styles';
 import CenturyGothic from '../../components/Wrappers/Text/CenturyGothic';
 import { icons, images } from '../../assets';
 import DrawerContent from '../../components/DrawerContent';
+import { useNavigation, CommonActions } from '@react-navigation/native';
+
+
 
 const DrawerStack = createDrawerNavigator();
 
 const DrawerNavigator = (props) => {
-
+    const navigation = useNavigation();
 
     return (
         <DrawerStack.Navigator
@@ -43,7 +46,9 @@ const DrawerNavigator = (props) => {
                         <View style={styles.drawerContainer}>
                             <View style={styles.topContainer}>
                                 <View style={styles.headingContainer}>
-                                    <Image source={icons.leftArrow} style={styles.iconBack} />
+                                    <TouchableOpacity onPress={() => { navigation.closeDrawer() }}>
+                                        <Image source={icons.leftArrow} style={styles.iconBack} />
+                                    </TouchableOpacity>
                                     <View style={styles.notificationBackground}>
                                         <Image source={icons.bell} style={styles.bell} />
                                     </View>

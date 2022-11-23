@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { icons } from '../../../assets';
+// import { icons } from '../../../assets';
 // import IconButton from '../../Buttons/IconButton';
 import CenturyGothic from '../../Wrappers/Text/CenturyGothic';
 import styles from './styles';
 
-const ServicesItem = ({ item }) => {
+const MedicinesItem = ({ item }) => {
   const navigation = useNavigation();
   return (
     <View style={styles.serviceContainer}>
@@ -23,4 +23,4 @@ const ServicesItem = ({ item }) => {
   );
 };
 
-export default ServicesItem;
+export default MedicinesItem;

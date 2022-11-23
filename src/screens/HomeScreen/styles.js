@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 0.9 * vh,
-    position: 'relative',
+    // position: 'relative',
     // marginTop: 2 * vh,
     right: 5.1 * vh
   },
@@ -79,13 +79,13 @@ const styles = StyleSheet.create({
     // alignSelf: 'flex-end',
   },
   iconFilter: {
-    height: 4 * vh,
-    width: 4 * vh,
+    height: 5 * vh,
+    width: 5 * vh,
     resizeMode: 'contain',
   },
   services: {
     // marginLeft: 2 * vh,
-    paddingBottom: 3 * vh,
+    paddingBottom: 10 * vh,
     // alignSelf: 'center'
     // backgroundColor: 'red',
     // alignItems: 'center'
@@ -93,12 +93,59 @@ const styles = StyleSheet.create({
     // margin: 2 * vh
   },
   listContainer: {
-    top: 2 * vh
+    top: 2 * vh,
+    // marginBottom: 10 * vh
+    // backgroundColor: 'green',
     // width: '94%'
     // alignItems: 'center',
     // justifyContent: 'center',
     // alignContent: 'center'
+  },
+  filterContainer: {
+    // backgroundColor: 'red',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    marginTop: 2 * vh
+  },
+  box: {
+    paddingVertical: 1 * vh,
+    width: 12 * vh,
+    borderWidth: 0.1 * vh,
+    borderRadius: 1 * vh,
+    borderColor: colors.darkBackground,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  coloredBox: {
+    paddingVertical: 1 * vh,
+    width: 12 * vh,
+    backgroundColor: colors.red,
+    // borderWidth: 0.2 * vh,
+    borderRadius: 1 * vh,
+    // borderColor: colors.darkBackground,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  text: {
+    fontFamily: fonts.CenturyGothic.CenturyGothic
+  },
+  modal: {
+    alignSelf: 'auto',
+    // width: '100%',
+    // backgroundColor: 'red'
+    // borderRadius: 3 * vh,
+    // margin: 5
+  },
+  modalHeading: {
+    // alignItems: 'center',
+    alignSelf: 'center',
+    // textAlign: 'center',
+    fontSize: 2.5 * vh,
+    marginTop: 1 * vh,
+    marginBottom: 1 * vh
   }
+
 });
 
 export default styles;

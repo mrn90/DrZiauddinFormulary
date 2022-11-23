@@ -4,10 +4,15 @@ import { View, ImageBackground, Image, Text, TouchableOpacity } from 'react-nati
 import { icons, images } from '../../assets';
 import { vh, vw } from '../../utils/units';
 // import Modal from "react-native-modal";
-import { useNavigation } from '@react-navigation/native';
+import { NavigationActions } from 'react-navigation';
+import { useNavigation, CommonActions } from '@react-navigation/native';
 import styles from './styles';
 const DrawerContent = props => {
     const navigation = useNavigation();
+    const resetAction = CommonActions.reset({
+        index: 1,
+        routes: [{ name: 'AuthNavigator' }]
+    });
     return (
 
         <View style={styles.drawerScreensContainer}>
@@ -30,7 +35,7 @@ const DrawerContent = props => {
 
                 <Image source={icons.rightArrow} style={styles.arrow} />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.screenContainer}>
+            <TouchableOpacity style={styles.screenContainer} onPress={() => navigation.dispatch(resetAction)}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', marginHorizontal: 2 * vh }}>
                     <Image source={icons.logout} style={styles.profileIcon} />
                     <CenturyGothic style={styles.text}>Exit</CenturyGothic>
