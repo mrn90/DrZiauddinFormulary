@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { icons } from '../../../assets';
@@ -9,16 +9,23 @@ import styles from './styles';
 
 
 
-const GenericsItem = ({ item, onItemSelect, selectedGenericItems }) => {
+const GenericsItem = ({ isSelected, item, onItemSelect, selectedGenericItems }) => {
+
+  useEffect(() => {
+
+  }, [isSelected]);
+
+  console.log('ITEM iN LIST', item)
+  console.log('isSelected', item?.id, isSelected)
   const navigation = useNavigation();
-  console.log('sleceted fkjashfkjashfaskfha', selectedGenericItems)
-  console.log('item id', item)
+  // console.log('sleceted fkjashfkjashfaskfha', selectedGenericItems)
+  // console.log('item id', item)
   return (
     <View style={styles.mainContainer}>
 
       <TouchableOpacity style={styles.medicineNameContainer} onPress={() => onItemSelect(item?.id)}>
         <CenturyGothic style={styles.nameMedicineText}>{item?.name}</CenturyGothic>
-        {selectedGenericItems?.includes(item?.id) ? <CenturyGothic style={styles.nameMedicineText}>'A'</CenturyGothic> : null}
+        {isSelected ? <Image source={icons.iconCheck} style={styles.iconCheck}></Image> : null}
 
         {/* <View style={styles.separator}></View> */}
       </TouchableOpacity>

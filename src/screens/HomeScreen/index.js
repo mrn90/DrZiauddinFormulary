@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, TextInput, Image, TouchableOpacity, FlatList, ScrollView, SafeAreaView, KeyboardAvoidingView } from 'react-native';
 import styles from './styles';
 import CenturyGothic from '../../components/Wrappers/Text/CenturyGothic';
@@ -57,24 +57,25 @@ const services = [
 const genericMedicines = [
   {
     name: 'Alendronate Tablet',
-    id: 1
+    id: 1,
+    isSelected: false
   },
   {
     name: 'Acyclovir Capsule',
-    id: 2
+    id: 2,
+    isSelected: false
   },
   {
-    name: 'Acyclovir Tablet',
-    id: 3
+    name: 'Albuterol inhalation solution',
+    id: 3,
+    isSelected: false
   },
   {
-    name: 'Albuterol inhalation solution	',
-    id: 4
+    name: 'Alendronate Tablet',
+    id: 4,
+    isSelected: false
   },
-  {
-    name: 'Alfuzosin hcl',
-    id: 5
-  },
+
 
 ];
 
@@ -84,19 +85,40 @@ const Home = props => {
   const [brandsBox, setBrandsBox] = useState(false)
   const [specialityBox, setSpecialityBox] = useState(false)
   const [isModalVisible, setModalVisible] = useState(false)
-  const [selectedGenericItems, setSelectedGenericItems] = useState([])
+  const [selectedGenericItems, setSelectedGenericItems] = useState(genericMedicines)
+
+  useEffect(() => {
+    console.log('pnCLikc')
+  }, [JSON.stringify(selectedGenericItems)]);
 
   const addToGeneric = (id) => {
-    var newArray = selectedGenericItems;
-    if (newArray.filter((e) => e === id).length) {
-      newArray = newArray.filter((e) => e !== id);
-    }
-    else {
-      newArray.push(id)
+    var newArray = selectedGenericItems
+    // .map((item) => {
+    //   if (item?.id === id) {
+    //     console.log('ITEM', item)
+    //     item?.isSelected = true
+    //   }
+    //   return item
+    // }
+    // )
 
-    }
-    setSelectedGenericItems(newArray)
-    console.log('newArray', newArray, selectedGenericItems)
+    // if (newArray.filter((e) => e === id).length) {
+    //   newArray = newArray.filter((e) => e !== id);
+    // }
+    // else {
+    //   newArray.push(id)
+
+    // }
+
+    const index = selectedGenericItems.findIndex((item) => {
+      return item?.id == id
+    })
+
+
+    newArray[index]['isSelected'] = !newArray[index]['isSelected']
+    console.log('INDEX', index)
+    setSelectedGenericItems([...newArray])
+    console.log('newArray -----', newArray, selectedGenericItems)
 
   }
 
@@ -120,23 +142,23 @@ const Home = props => {
   const toggleModal = (obj) => {
     // setModalVisible(!isModalVisible);
     if (obj === 'generic') {
-      setGenericBox(!genericBox)
+      // setGenericBox(!genericBox)
       setModalVisible(!isModalVisible);
-      changeColor(obj)
+      // changeColor(obj)
       // toggleModal()
     }
-    if (obj === 'brands') {
-      setGenericBox(!genericBox)
-      setModalVisible(!isModalVisible);
-      changeColor(obj)
-      // toggleModal()
-    }
-    if (obj === 'speciality') {
-      setGenericBox(!genericBox)
-      setModalVisible(!isModalVisible);
-      changeColor(obj)
-      // toggleModal()
-    }
+    // if (obj === 'brands') {
+    //   setGenericBox(!genericBox)
+    //   setModalVisible(!isModalVisible);
+    //   changeColor(obj)
+    //   // toggleModal()
+    // }
+    // if (obj === 'speciality') {
+    //   setGenericBox(!genericBox)
+    //   setModalVisible(!isModalVisible);
+    //   changeColor(obj)
+    //   // toggleModal()
+    // }
   };
 
 
@@ -145,7 +167,7 @@ const Home = props => {
   };
 
   const renderGenericMedicines = ({ item }) => {
-    return <GenericsItem item={item} onItemSelect={addToGeneric} selectedGenericItems={selectedGenericItems} />;
+    return <GenericsItem item={item} onItemSelect={addToGeneric} selectedGenericItems={selectedGenericItems} isSelected={item?.isSelected} />;
   };
 
   return (
@@ -176,13 +198,18 @@ const Home = props => {
 
       </View>
       {showFilters === true ? <View style={styles.filterContainer}>
+        {/* <TouchableOpacity
+          style={styles.box}
+          onPress={() => { toggleModal('generic') }}>
+          <CenturyGothic style={styles.text}>Generic</CenturyGothic>
+        </TouchableOpacity> */}
         {genericBox === false ? <TouchableOpacity
           style={styles.box}
           onPress={() => { toggleModal('generic') }}>
           <CenturyGothic style={styles.text}>Generic</CenturyGothic>
         </TouchableOpacity> : <TouchableOpacity
           style={styles.coloredBox}
-          onPress={() => { toggleModal() }}>
+          onPress={() => { toggleModal('generic') }}>
           <CenturyGothic style={styles.text}>Generic</CenturyGothic>
         </TouchableOpacity>}
         {brandsBox === false ? <TouchableOpacity
@@ -216,13 +243,14 @@ const Home = props => {
         keyExtractor={item => item.id}
         renderItem={renderMedicines}
         showsHorizontalScrollIndicator={false}
+
       />
 
 
       <Modal
         isVisible={isModalVisible}
         animationIn={'slideInUp'}
-        onBackdropPress={() => toggleModal()}
+        onBackdropPress={() => setModalVisible(false)}
         style={styles.modal}
       >
 
@@ -254,7 +282,13 @@ const Home = props => {
               </View>
             </TouchableOpacity>
           </View>
-          <FlatList
+
+          {selectedGenericItems.map((item) => {
+
+            return <GenericsItem item={item} onItemSelect={addToGeneric} selectedGenericItems={selectedGenericItems} isSelected={item?.isSelected} />;
+
+          })}
+          {/* <FlatList
             // horizontal
             nestedScrollEnabled
             data={genericMedicines}
@@ -262,8 +296,9 @@ const Home = props => {
             contentContainerStyle={styles.listContainer}
             keyExtractor={item => item.id}
             renderItem={renderGenericMedicines}
+            extraData={selectedGenericItems}
           // showsHorizontalScrollIndicator={false}
-          />
+          /> */}
         </View>
 
       </Modal>

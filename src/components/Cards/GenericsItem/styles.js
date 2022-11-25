@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     // alignSelf: 'flex-start',
     flexDirection: 'row',
     width: '80%',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-between',
     borderBottomWidth: 0.5,
     paddingBottom: 1 * vh
     // marginRight: 8 * vw,
@@ -30,7 +30,13 @@ const styles = StyleSheet.create({
   },
   nameMedicineText: {
     fontFamily: fonts.CenturyGothic.CenturyGothic
+
     // alignSelf: 'flex-start'
+  },
+  iconCheck: {
+    height: 2 * vh,
+    width: 2 * vh,
+    resizeMode: 'contain'
   },
   separator: {
     height: 0.2 * vh,
