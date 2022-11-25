@@ -140,6 +140,8 @@ const styles = StyleSheet.create({
   modalHeading: {
     // alignItems: 'center',
     alignSelf: 'center',
+    fontFamily: fonts.CenturyGothic.CenturyGothicBold,
+    fontWeight: 'bold',
     // textAlign: 'center',
     fontSize: 2.5 * vh,
     marginTop: 1 * vh,

@@ -9,6 +9,8 @@ import { vh, vw } from '../../utils/units';
 import MedicinesItem from '../../components/Cards/MedicinesItem';
 import GenericsItem from '../../components/Cards/GenericsItem'
 import Modal from "react-native-modal";
+import BrandsItem from '../../components/Cards/BrandsItem';
+import SpecialityItem from '../../components/Cards/SpecialityItem';
 
 
 const services = [
@@ -75,9 +77,48 @@ const genericMedicines = [
     id: 4,
     isSelected: false
   },
-
-
 ];
+
+const brands = [
+  {
+    name: 'GlaxoSmithKline',
+    id: 1,
+    isSelected: false
+  },
+  {
+    name: 'Getz Pharma (Private) Limited',
+    id: 2,
+    isSelected: false
+  },
+  {
+    name: 'Abbott Laboratories Pakistan Limited',
+    id: 3,
+    isSelected: false
+  },
+];
+
+const speciality = [
+  {
+    name: 'PULMONOLOGY (CHEST SPECIALIST)',
+    id: 1,
+    isSelected: false
+  },
+  {
+    name: 'ENT SURGERY',
+    id: 2,
+    isSelected: false
+  },
+  {
+    name: 'NEURO & SPINAL SURGEON',
+    id: 3,
+    isSelected: false
+  },
+  {
+    name: 'GENERAL SURGERY & LAPAROSCOPY',
+    id: 4,
+    isSelected: false
+  }
+]
 
 const Home = props => {
   const [showFilters, setShowFilters] = useState(false)
@@ -85,30 +126,17 @@ const Home = props => {
   const [brandsBox, setBrandsBox] = useState(false)
   const [specialityBox, setSpecialityBox] = useState(false)
   const [isModalVisible, setModalVisible] = useState(false)
+  const [whichModal, setWhichModal] = useState('')
   const [selectedGenericItems, setSelectedGenericItems] = useState(genericMedicines)
+  const [selectedBrandsItems, setSelectedBrandsItems] = useState(brands)
+  const [selectedSpecialityItems, setSelectedSpecialityItems] = useState(speciality)
 
   useEffect(() => {
-    console.log('pnCLikc')
-  }, [JSON.stringify(selectedGenericItems)]);
+    console.log('onClick')
+  }, [JSON.stringify(selectedGenericItems), JSON.stringify(selectedBrandsItems), JSON.stringify(selectedSpecialityItems)]);
 
   const addToGeneric = (id) => {
     var newArray = selectedGenericItems
-    // .map((item) => {
-    //   if (item?.id === id) {
-    //     console.log('ITEM', item)
-    //     item?.isSelected = true
-    //   }
-    //   return item
-    // }
-    // )
-
-    // if (newArray.filter((e) => e === id).length) {
-    //   newArray = newArray.filter((e) => e !== id);
-    // }
-    // else {
-    //   newArray.push(id)
-
-    // }
 
     const index = selectedGenericItems.findIndex((item) => {
       return item?.id == id
@@ -119,6 +147,34 @@ const Home = props => {
     console.log('INDEX', index)
     setSelectedGenericItems([...newArray])
     console.log('newArray -----', newArray, selectedGenericItems)
+
+  }
+
+  const addToBrands = (id) => {
+    var brandsArray = selectedBrandsItems
+
+    const index = selectedBrandsItems.findIndex((item) => {
+      return item?.id == id
+    })
+
+    brandsArray[index]['isSelected'] = !brandsArray[index]['isSelected']
+    console.log('INDEX', index)
+    setSelectedBrandsItems([...brandsArray])
+    console.log('brandsArray -----', brandsArray, selectedBrandsItems)
+
+  }
+
+  const addToSpeciality = (id) => {
+    var specialityArray = selectedSpecialityItems
+
+    const index = selectedSpecialityItems.findIndex((item) => {
+      return item?.id == id
+    })
+
+    specialityArray[index]['isSelected'] = !specialityArray[index]['isSelected']
+    console.log('INDEX', index)
+    setSelectedSpecialityItems([...specialityArray])
+    console.log('specialityArray -----', specialityArray, selectedSpecialityItems)
 
   }
 
@@ -143,22 +199,25 @@ const Home = props => {
     // setModalVisible(!isModalVisible);
     if (obj === 'generic') {
       // setGenericBox(!genericBox)
+      setWhichModal(obj)
       setModalVisible(!isModalVisible);
       // changeColor(obj)
       // toggleModal()
     }
-    // if (obj === 'brands') {
-    //   setGenericBox(!genericBox)
-    //   setModalVisible(!isModalVisible);
-    //   changeColor(obj)
-    //   // toggleModal()
-    // }
-    // if (obj === 'speciality') {
-    //   setGenericBox(!genericBox)
-    //   setModalVisible(!isModalVisible);
-    //   changeColor(obj)
-    //   // toggleModal()
-    // }
+    if (obj === 'brands') {
+      // setGenericBox(!genericBox)
+      setWhichModal(obj)
+      setModalVisible(!isModalVisible);
+      // changeColor(obj)
+      // toggleModal()
+    }
+    if (obj === 'speciality') {
+      // setGenericBox(!genericBox)
+      setWhichModal(obj)
+      setModalVisible(!isModalVisible);
+      // changeColor(obj)
+      // toggleModal()
+    }
   };
 
 
@@ -168,6 +227,14 @@ const Home = props => {
 
   const renderGenericMedicines = ({ item }) => {
     return <GenericsItem item={item} onItemSelect={addToGeneric} selectedGenericItems={selectedGenericItems} isSelected={item?.isSelected} />;
+  };
+
+  const renderBrands = ({ item }) => {
+    return <BrandsItem item={item} onItemSelect={addToBrands} selectedBrandsItems={selectedBrandsItems} isSelected={item?.isSelected} />;
+  };
+
+  const renderSpeciality = ({ item }) => {
+    return <SpecialityItem item={item} onItemSelect={addToSpeciality} selectedSpecialityItems={selectedSpecialityItems} isSelected={item?.isSelected} />;
   };
 
   return (
@@ -218,7 +285,7 @@ const Home = props => {
           <CenturyGothic style={styles.text}>Brands</CenturyGothic>
         </TouchableOpacity> : <TouchableOpacity
           style={styles.coloredBox}
-          onPress={() => { toggleModal() }}>
+          onPress={() => { toggleModal('brands') }}>
           <CenturyGothic style={styles.text}>Brands</CenturyGothic>
         </TouchableOpacity>}
         {specialityBox === false ? <TouchableOpacity
@@ -227,7 +294,7 @@ const Home = props => {
           <CenturyGothic style={styles.text}>Speciality</CenturyGothic>
         </TouchableOpacity> : <TouchableOpacity
           style={styles.coloredBox}
-          onPress={() => { toggleModal() }}>
+          onPress={() => { toggleModal('speciality') }}>
           <CenturyGothic style={styles.text}>Speciality</CenturyGothic>
         </TouchableOpacity>}
 
@@ -245,7 +312,6 @@ const Home = props => {
         showsHorizontalScrollIndicator={false}
 
       />
-
 
       <Modal
         isVisible={isModalVisible}
@@ -268,7 +334,13 @@ const Home = props => {
           borderTopLeftRadius: 2 * vh,
           borderTopRightRadius: 2 * vh,
         }}>
-          <CenturyGothic style={styles.modalHeading}>Generic</CenturyGothic>
+
+          {whichModal === 'generic' ?
+            <CenturyGothic style={styles.modalHeading}>Generic</CenturyGothic> :
+            whichModal === 'brands' ? <CenturyGothic style={styles.modalHeading}>Brands</CenturyGothic> :
+              whichModal === 'speciality' ? <CenturyGothic style={styles.modalHeading}>Speciality</CenturyGothic> :
+                null}
+
           <View style={styles.searchContainer}>
 
             <TextInput placeholder='Search..'
@@ -282,23 +354,18 @@ const Home = props => {
               </View>
             </TouchableOpacity>
           </View>
-
-          {selectedGenericItems.map((item) => {
+          {whichModal === 'generic' ? selectedGenericItems.map((item) => {
 
             return <GenericsItem item={item} onItemSelect={addToGeneric} selectedGenericItems={selectedGenericItems} isSelected={item?.isSelected} />;
 
-          })}
-          {/* <FlatList
-            // horizontal
-            nestedScrollEnabled
-            data={genericMedicines}
-            style={styles.services}
-            contentContainerStyle={styles.listContainer}
-            keyExtractor={item => item.id}
-            renderItem={renderGenericMedicines}
-            extraData={selectedGenericItems}
-          // showsHorizontalScrollIndicator={false}
-          /> */}
+          }) : whichModal === 'brands' ? selectedBrandsItems.map((item) => {
+
+            return <BrandsItem item={item} onItemSelect={addToBrands} selectedBrandsItems={selectedBrandsItems} isSelected={item?.isSelected} />;
+          }) : whichModal === 'speciality' ? selectedSpecialityItems.map((item) => {
+
+            return <SpecialityItem item={item} onItemSelect={addToSpeciality} selectedSpecialityItems={selectedSpecialityItems} isSelected={item?.isSelected} />;
+          }) : null}
+
         </View>
 
       </Modal>

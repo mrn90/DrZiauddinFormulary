@@ -9,7 +9,7 @@ import styles from './styles';
 
 
 
-const GenericsItem = ({ isSelected, item, onItemSelect, selectedGenericItems }) => {
+const BrandsItem = ({ isSelected, item, onItemSelect, selectedBrandsItems }) => {
 
   useEffect(() => {
 
@@ -38,4 +38,4 @@ const GenericsItem = ({ isSelected, item, onItemSelect, selectedGenericItems }) 
   );
 };
 
-export default GenericsItem;
+export default BrandsItem;

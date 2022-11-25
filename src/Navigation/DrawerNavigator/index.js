@@ -13,7 +13,8 @@ import styles from './styles';
 import CenturyGothic from '../../components/Wrappers/Text/CenturyGothic';
 import { icons, images } from '../../assets';
 import DrawerContent from '../../components/DrawerContent';
-import { useNavigation, CommonActions } from '@react-navigation/native';
+// import { useNavigation, CommonActions } from '@react-navigation/native';
+import { DrawerActions, useNavigation } from '@react-navigation/native';
 
 
 
@@ -46,7 +47,7 @@ const DrawerNavigator = (props) => {
                         <View style={styles.drawerContainer}>
                             <View style={styles.topContainer}>
                                 <View style={styles.headingContainer}>
-                                    <TouchableOpacity onPress={() => { navigation.closeDrawer() }}>
+                                    <TouchableOpacity onPress={() => { navigation.dispatch(DrawerActions.closeDrawer()) }}>
                                         <Image source={icons.leftArrow} style={styles.iconBack} />
                                     </TouchableOpacity>
                                     <View style={styles.notificationBackground}>

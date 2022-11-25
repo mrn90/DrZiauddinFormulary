@@ -16,6 +16,7 @@ export const fonts = {
 export const icons = {
     iconDrawer: require('./icons/iconDrawer.png'),
     iconCheck: require('./icons/iconCheck.png'),
+    iconCheck2: require('./icons/iconCheck2.png'),
     profileIcon: require('./icons/user.png'),
     iconSearch: require('./icons/iconSearch.png'),
     iconFilter: require('./icons/iconFilter.png'),
