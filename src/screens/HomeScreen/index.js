@@ -258,9 +258,9 @@ const Home = props => {
           </TouchableOpacity>
         </View>
         <TouchableOpacity onPress={() => { setShowFilters(!showFilters) }}>
-          <View style={styles.iconContainer}>
-            <Image source={icons.iconFilter} style={styles.iconFilter} />
-          </View>
+
+          <Image source={icons.iconFilter} style={styles.iconFilter} />
+
         </TouchableOpacity>
 
       </View>

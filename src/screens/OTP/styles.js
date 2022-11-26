@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         // alignItems: 'center',
         // justifyContent: 'center'
         alignSelf: 'center',
-        fontSize: 2.5 * vh,
+        fontSize: 2.8 * vh,
         marginTop: 2 * vh
     },
     fieldContainer: {
@@ -42,7 +42,8 @@ const styles = StyleSheet.create({
         marginTop: 2 * vh,
         shadowOpacity: 0.3,
         shadowOffset: { width: 0, height: 3 },
-        color: colors.grayText1
+        color: colors.grayText1,
+        elevation: 2 * vh
     },
     placeholder: {
         fontFamily: fonts.CenturyGothic.CenturyGothic

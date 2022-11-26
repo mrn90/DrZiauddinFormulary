@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     mainView: {
         flex: 1,
         width: '100%',
-        backgroundColor: '#FFF'
+        // backgroundColor: '#FFF'
     },
     logosContainer: {
         flexDirection: 'row',
@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
     fieldContainer: {
         marginTop: 5 * vh,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        // backgroundColor: 'red'
     },
     field: {
         alignSelf: 'center',
@@ -46,7 +47,8 @@ const styles = StyleSheet.create({
         marginTop: 10 * vh,
         shadowOpacity: 0.3,
         shadowOffset: { width: 0, height: 3 },
-        // shadowRadius: 0.4 * vh,
+        shadowRadius: 0.4 * vh,
+        elevation: 2 * vh,
         // zIndex: 2 * vh
         fontFamily: fonts.CenturyGothic.CenturyGothic,
         // fontWeight: 'bold'

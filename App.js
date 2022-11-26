@@ -14,13 +14,14 @@ import {
   StyleSheet,
 } from 'react-native';
 import Navigation from './src/Navigation';
+import { colors } from './src/utils/theme';
 
 const App = () => {
   return (
     <View style={styles.container}>
       <StatusBar
         translucent={false}
-        // backgroundColor="transparent"
+        backgroundColor="transparent"
         barStyle="dark-content"
       />
       <Navigation />
@@ -31,7 +32,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
   },
 });
 

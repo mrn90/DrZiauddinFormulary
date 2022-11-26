@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   scrollView: {
     flex: 1,
     // width: 100 * vw,
-    // backgroundColor: 'red',
+    backgroundColor: 'white',
     overflow: 'scroll',
     // paddingBottom: 30 * vh,
   },
@@ -54,7 +54,8 @@ const styles = StyleSheet.create({
     // marginTop: 2 * vh,
     shadowOpacity: 0.4,
     shadowOffset: { width: 1, height: 1 },
-    fontFamily: fonts.CenturyGothic.CenturyGothicBold
+    fontFamily: fonts.CenturyGothic.CenturyGothicBold,
+    elevation: 2 * vh
   },
   iconContainer: {
     // height: 4 * vh,
@@ -79,9 +80,11 @@ const styles = StyleSheet.create({
     // alignSelf: 'flex-end',
   },
   iconFilter: {
-    height: 5 * vh,
-    width: 5 * vh,
+    height: 9 * vw,
+    width: 9 * vw,
     resizeMode: 'contain',
+    right: 5 * vh
+    // paddingVertical: 2 * vh
   },
   services: {
     // marginLeft: 2 * vh,
@@ -94,7 +97,7 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     top: 2 * vh,
-    // marginBottom: 10 * vh
+    paddingBottom: 10 * vh
     // backgroundColor: 'green',
     // width: '94%'
     // alignItems: 'center',

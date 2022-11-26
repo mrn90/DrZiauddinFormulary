@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
         marginTop: 2 * vh,
         shadowOpacity: 0.3,
         shadowOffset: { width: 0, height: 3 },
+        elevation: 2 * vh
         // position: 'absolute'
         // zIndex: 2 * vhs
     },
@@ -61,6 +62,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.3,
         shadowOffset: { width: 0, height: 3 },
         position: 'relative',
+        elevation: 2 * vh
         // paddingBottom: 5 * vh
         // zIndex: 4 * vh,
         // top: 200
