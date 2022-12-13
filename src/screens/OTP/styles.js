@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         marginTop: 2 * vh,
         shadowOpacity: 0.3,
         shadowOffset: { width: 0, height: 3 },
-        color: colors.grayText1,
+        color: colors.black,
         elevation: 2 * vh
     },
     placeholder: {
@@ -60,6 +60,12 @@ const styles = StyleSheet.create({
         backgroundColor: colors.red,
         borderRadius: 4 * vh,
     },
+    errorText: {
+        alignSelf: 'center',
+        color: colors.red,
+        fontFamily: fonts.CenturyGothic.CenturyGothic,
+        margin: 2 * vh
+    }
 });
 
 export default styles;

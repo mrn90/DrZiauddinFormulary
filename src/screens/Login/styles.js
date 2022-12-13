@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     mainView: {
         flex: 1,
         width: '100%',
-        // backgroundColor: '#FFF'
+        backgroundColor: '#FFF'
     },
     logosContainer: {
         flexDirection: 'row',
@@ -109,6 +109,12 @@ const styles = StyleSheet.create({
         backgroundColor: colors.red,
         borderRadius: 4 * vh,
     },
+    errorText: {
+        alignSelf: 'center',
+        color: colors.red,
+        fontFamily: fonts.CenturyGothic.CenturyGothic,
+        marginTop: 2 * vh
+    }
 });
 
 export default styles;

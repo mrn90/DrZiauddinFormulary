@@ -10,6 +10,9 @@ import DropDownPicker from 'react-native-dropdown-picker';
 
 const Profile = props => {
     const [open, setOpen] = useState(false);
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
     const [value, setValue] = useState(null);
     const [items, setItems] = useState([
         { label: 'Anesthesiology', value: 'anesthesiology' },
@@ -31,6 +34,9 @@ const Profile = props => {
                         placeholderTextColor={colors.lightGray}
                         placeholderStyle={styles.placeholder}
                         keyboardType={'default'}
+                        onChangeText={firstName => {
+                            setFirstName(firstName);
+                        }}
                     ></TextInput>
                     <TextInput
                         style={styles.field}
@@ -38,6 +44,9 @@ const Profile = props => {
                         placeholderTextColor={colors.lightGray}
                         placeholderStyle={styles.placeholder}
                         keyboardType={'default'}
+                        onChangeText={lastName => {
+                            setLastName(lastName);
+                        }}
                     ></TextInput>
                     <TextInput
                         style={styles.field}
@@ -45,6 +54,9 @@ const Profile = props => {
                         placeholderTextColor={colors.lightGray}
                         placeholderStyle={styles.placeholder}
                         keyboardType={'email-address'}
+                        onChangeText={email => {
+                            setEmail(email);
+                        }}
                     ></TextInput>
                     <DropDownPicker
                         placeholder="Speciality"
