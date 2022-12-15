@@ -92,4 +92,133 @@ export class UserApi {
             return error
         }
     }
+
+
+    async EnterProfile(obj) {
+        // make the api
+        console.log("obj", obj)
+        let data = {
+            fname: obj.fname,
+            lname: obj.lname,
+            email: obj.email,
+            phone: obj.phone,
+            speciality: obj.speciality,
+            r: 'oemrpharmacy/formulary/formularyprofile'
+        }
+        const response = await fetch(ApiConfig.url
+            + '&r=' + data.r
+            + '&fname=' + data.fname
+            + '&lname=' + data.lname
+            + '&email=' + data.email
+            + '&phone=' + data.phone
+            + '&speciality=' + data.speciality, {
+
+            method: "GET",
+            headers: new Headers({
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }),
+            // body: JSON.stringify({
+            //     emailAddress: obj.emailAddress,
+            //     password: obj.password,
+            //     Cpassword: obj.Cpassword,
+            // }),
+        })
+        // transform the data into the format we are expecting
+        try {
+
+            console.log('response ENTERPROFILE==>', response)
+            if (response.status == true) {
+                let result = await response.json()
+                console.log("we here in api OTP", result)
+                return result
+
+            } else {
+                let result = await response.json()
+                // console.log("we here result", result)
+                return result
+
+            }
+
+        } catch (error) {
+            return error
+        }
+    }
+
+
+    async GetPharmacyData() {
+        // make the api
+        let data = {
+            r: 'oemrpharmacy/formulary/formularypharmacylisting'
+        }
+        const response = await fetch(ApiConfig.url
+            + '&r=' + data.r, {
+            method: "GET",
+            headers: new Headers({
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }),
+
+        })
+        // transform the data into the format we are expecting
+        try {
+
+            console.log('response GETPHARMACY DATA==>', response)
+            if (response.status == true) {
+                let result = await response.json()
+                console.log("we here in api GETPHARMACYDATA", result)
+                return result
+
+            } else {
+                let result = await response.json()
+                // console.log("we here result", result)
+                return result
+
+            }
+
+        } catch (error) {
+            return error
+        }
+    }
+
+
+    // search 
+    async SearchPharmacyData(obj) {
+        // make the api
+        let data = {
+            r: 'oemrpharmacy/formulary/formularypharmacylisting',
+            code: obj.code
+        }
+        const response = await fetch(ApiConfig.url
+            + '&r=' + data.r
+            + '&code=' + data.code
+
+            , {
+                method: "GET",
+                headers: new Headers({
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }),
+
+            })
+        // transform the data into the format we are expecting
+        try {
+
+            console.log('response GETPHARMACY DATA==>', response)
+            if (response.status == true) {
+                let result = await response.json()
+                console.log("we here in api GETPHARMACYDATA", result)
+                return result
+
+            } else {
+                let result = await response.json()
+                // console.log("we here result", result)
+                return result
+
+            }
+
+        } catch (error) {
+            return error
+        }
+    }
 }

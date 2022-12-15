@@ -23,6 +23,8 @@ const DrawerStack = createDrawerNavigator();
 const DrawerNavigator = (props) => {
     const navigation = useNavigation();
 
+   
+
     return (
         <DrawerStack.Navigator
             screenOptions={{

@@ -86,6 +86,9 @@ const styles = StyleSheet.create({
     right: 5 * vh
     // paddingVertical: 2 * vh
   },
+  loader: {
+    marginTop: 5 * vh
+  },
   services: {
     // marginLeft: 2 * vh,
     paddingBottom: 10 * vh,

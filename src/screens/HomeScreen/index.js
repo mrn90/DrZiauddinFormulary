@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { View, TextInput, Image, TouchableOpacity, FlatList, ScrollView, SafeAreaView, KeyboardAvoidingView } from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import { View, TextInput, Image, TouchableOpacity, FlatList, ScrollView, SafeAreaView, KeyboardAvoidingView, ActivityIndicator } from 'react-native';
 import styles from './styles';
 import CenturyGothic from '../../components/Wrappers/Text/CenturyGothic';
 import { colors } from '../../utils/theme';
@@ -11,6 +11,7 @@ import GenericsItem from '../../components/Cards/GenericsItem'
 import Modal from "react-native-modal";
 import BrandsItem from '../../components/Cards/BrandsItem';
 import SpecialityItem from '../../components/Cards/SpecialityItem';
+import { UserApi } from '../../api/user-api';
 
 
 const services = [
@@ -120,20 +121,85 @@ const speciality = [
   }
 ]
 
-const Home = props => {
+const Home = ({ route }) => {
+  // const { phoneNumber } = route?.params;
+  // console.log('PHONE NUMEBR', route?.params)
+  const refKeyBoard = useRef(null);
+
+  const [loader, setLoader] = useState(false)
+  const [error, setError] = useState('')
   const [showFilters, setShowFilters] = useState(false)
   const [genericBox, setGenericBox] = useState(false)
   const [brandsBox, setBrandsBox] = useState(false)
   const [specialityBox, setSpecialityBox] = useState(false)
   const [isModalVisible, setModalVisible] = useState(false)
   const [whichModal, setWhichModal] = useState('')
+  const [services, setServices] = useState(services)
   const [selectedGenericItems, setSelectedGenericItems] = useState(genericMedicines)
   const [selectedBrandsItems, setSelectedBrandsItems] = useState(brands)
   const [selectedSpecialityItems, setSelectedSpecialityItems] = useState(speciality)
+  const [searchWord, setSearchWord] = useState('')
 
   useEffect(() => {
-    console.log('onClick')
+
+    getPharmacyData()
+    // console.log('onClick')
   }, [JSON.stringify(selectedGenericItems), JSON.stringify(selectedBrandsItems), JSON.stringify(selectedSpecialityItems)]);
+
+  const search = async (obj) => {
+
+    console.log('onbejct', obj)
+    setLoader(true)
+    setError('')
+    // setSearchWord('')
+    try {
+
+      let data = {
+        code: obj.searchWord
+      }
+
+      const User = new UserApi()
+      let resultHandle = await User.SearchPharmacyData(data)
+
+      // console.log('resultHandle', resultHandle.data)
+
+      if (resultHandle?.status == true) {
+        setLoader(false)
+        setServices(resultHandle?.data)
+      } else {
+        setError(JSON.stringify(resultHandle?.msg))
+        setLoader(false)
+      }
+    } catch (err) {
+      console.error('ERROR HERE', err.message);
+      setError(err.message);
+      setLoader(false)
+    }
+  }
+
+  const getPharmacyData = async () => {
+    setLoader(true)
+    setError('')
+    try {
+
+      const User = new UserApi()
+      let resultHandle = await User.GetPharmacyData()
+
+      // console.log('resultHandle', resultHandle.data)
+
+      if (resultHandle?.status == true) {
+        setLoader(false)
+        setServices(resultHandle?.data)
+      } else {
+        setError(JSON.stringify(resultHandle?.msg))
+        setLoader(false)
+      }
+    } catch (err) {
+      console.error('ERROR HERE', err.message);
+      setError(err.message);
+      setLoader(false)
+    }
+  }
 
   const addToGeneric = (id) => {
     var newArray = selectedGenericItems
@@ -248,10 +314,19 @@ const Home = props => {
 
           <TextInput placeholder='Search..'
             placeholderTextColor={colors.grayText6}
-            style={styles.search}>
+            style={styles.search}
+            // returnKeyType='search'
+            // ref={refKeyBoard}
+            onChangeText={(searchWord) => {
+              setSearchWord(searchWord);
+            }}
+          // onSubmitEditing={() => {
+          //   search(searchWord);
+          // }}
+          >
 
           </TextInput>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => { search(searchWord) }}>
             <View style={styles.iconContainer}>
               <Image source={icons.iconSearch} style={styles.searchIcon} />
             </View>
@@ -299,9 +374,7 @@ const Home = props => {
         </TouchableOpacity>}
 
       </View> : null}
-
-
-      <FlatList
+      {loader ? <ActivityIndicator size={'large'} color={colors.red} style={styles.loader} /> : <FlatList
         // horizontal
         nestedScrollEnabled
         data={services}
@@ -311,7 +384,9 @@ const Home = props => {
         renderItem={renderMedicines}
         showsHorizontalScrollIndicator={false}
 
-      />
+      />}
+
+
 
       <Modal
         isVisible={isModalVisible}

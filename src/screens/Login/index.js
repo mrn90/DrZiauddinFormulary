@@ -8,8 +8,13 @@ import { vh } from '../../utils/units';
 import MainButton from '../../components/Buttons/MainButton'
 import { ApiConfig } from "../../api/api-config"
 import { UserApi } from '../../api/user-api'
+import { useNavigation } from '@react-navigation/native';
+
+
 // import Toast from 'react-native-toast-message';
 const Login = props => {
+
+    const navigation = useNavigation()
     const [checkBox, setCheckBox] = useState(false)
     const [loader, setLoader] = useState(false)
     const [error, setError] = useState('')
@@ -52,7 +57,12 @@ const Login = props => {
                 console.log('resultHandle', resultHandle)
                 if (resultHandle?.status == true) {
                     setLoader(false)
-                    props?.navigation?.navigate('OTPscreen', { phoneNumber: phoneNumber })
+                    if (resultHandle?.profile_data?.OTP_VERIFIED_STATUS === '1') {
+                        navigation?.navigate('DrawerNavigator', { screen: "Home" })
+                    } else {
+                        navigation?.navigate('OTPscreen', { phoneNumber: phoneNumber })
+                    }
+
                 } else {
                     setError(JSON.stringify(resultHandle?.msg))
                     setLoader(false)

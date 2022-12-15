@@ -17,7 +17,7 @@ const DrawerContent = props => {
 
         <View style={styles.drawerScreensContainer}>
 
-            <TouchableOpacity style={styles.screenContainer} onPress={() => { navigation.navigate('AuthNavigator', 'ProfileScreen') }}>
+            <TouchableOpacity style={styles.screenContainer} onPress={() => { navigation.navigate('AuthNavigator', { screen: 'ProfileScreen' }) }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', marginHorizontal: 2 * vh }}>
                     <Image source={icons.iconInformation} style={styles.profileIcon} />
                     <CenturyGothic style={styles.text}>Profile Information</CenturyGothic>

@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Text,
   View,
@@ -15,8 +15,13 @@ import {
 } from 'react-native';
 import Navigation from './src/Navigation';
 import { colors } from './src/utils/theme';
-
+import AnimatedSplash from "react-native-animated-splash";
 const App = () => {
+
+  useEffect(() => {
+    AnimatedSplash.hide();
+  }, []);
+
   return (
     <View style={styles.container}>
       <StatusBar

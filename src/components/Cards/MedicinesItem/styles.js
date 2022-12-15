@@ -10,12 +10,14 @@ const styles = StyleSheet.create({
     borderWidth: 0.1 * vh,
     backgroundColor: colors.white,
     borderColor: colors.lightGray,
-    borderRadius: 0.5 * vh,
+    borderRadius: 0.8 * vh,
     paddingVertical: 2 * vh,
+    // paddingHorizontal: 2 * vh,
     // marginHorizontal: 2 * vh,
     // backgroundColor: 'red'
     width: '90%',
     alignSelf: 'center',
+    // alignItems: 'center',
     shadowOpacity: 0.2,
     shadowOffset: { width: 0, height: 4 },
     elevation: 1 * vh
@@ -25,13 +27,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    marginLeft: 2 * vh,
+    marginLeft: 1 * vh,
+    // width: '100%',
+    // backgroundColor: 'green',
     // paddingHorizontal: 1 * vh
+  },
+  medicineName: {
+    fontSize: 1.5 * vh
   },
   medicineMaker: {
     color: colors.red,
     fontFamily: fonts.CenturyGothic.CenturyGothicBold,
-    left: 2 * vh
+    left: 1 * vh,
+    fontSize: 1.2 * vh
   },
 });
 
